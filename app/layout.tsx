@@ -21,7 +21,7 @@ export default function RootLayout({
         className={`antialiased`}
       >
         <Navbar/>
-        <main>{children}</main>
+        <main className="bg-amber-200">{children}</main>
       </body>
     </html>
   );
