@@ -1,29 +1,37 @@
-'use client'
+"use client";
 import Logo from "@/ui/Logo";
 import { CiSearch } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import HeaderItem from "./HeaderItem";
 import MobileMenu from "./MobileMenu";
+import Backdrop from "@/ui/Backdrop";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
   return (
-    <header className="bg-white fixed flex items-center justify-between p-2 w-screen h-15 flex items-center shadow-lg px-5 md:px-30 relative">
-      <GiHamburgerMenu
-        className="md:hidden text-black  hover:text-blue-400 cursor-pointer"
-        onClick={() => setIsMobileMenuOpen(true)}
-      />
-      <Logo />
-      <div className="hidden md:flex  items-center">
-        <HeaderItem />
+    <header>
+      <div className="bg-white fixed flex items-center justify-between py-2 w-screen h-15  shadow-lg px-4 md:px-10 xl:px-30 ">
+        <GiHamburgerMenu
+          size={20}
+          className="md:hidden text-black  hover:text-blue-400 cursor-pointer"
+          onClick={() => setIsMobileMenuOpen(true)}
+        />
+        <Logo />
+        <div className="hidden md:flex  items-center justify-between">
+          <HeaderItem />
+        </div>
+        <div className="cursor-pointer">
+          <CiSearch size={22} />
+        </div>
       </div>
-      <div className="cursor-pointer">
-        <CiSearch size={23} />
+      {isMobileMenuOpen && <MobileMenu />}
+      <div className="z-5">
+        <Backdrop
+          isMobileMenuOpen={isMobileMenuOpen}
+          MobileMenuHandler={() => setIsMobileMenuOpen(false)}
+        />
       </div>
-      {isMobileMenuOpen && (
-        <MobileMenu />
-      )}
     </header>
   );
 };
