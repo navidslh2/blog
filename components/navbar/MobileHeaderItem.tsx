@@ -28,7 +28,7 @@ const MobileHeaderItem = () => {
         item.children ? (
           <li
             key={item.title}
-            className="w-full h-10 flex items-center  relative  hover:text-blue-600  hoverEffect  hover:border-l-2 hover:border-blue-600"
+            className="w-full h-10 flex items-center  relative  hover:text-blue-600  hoverEffect border-l-2 border-transparent hover:border-l-2 hover:border-blue-600"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             ref={dropdownRef}
           >
@@ -46,7 +46,7 @@ const MobileHeaderItem = () => {
                   {item.children.map((ch) => (
                     <motion.li
                       key={ch.title}
-                      className="text-black flex items-center hover:text-blue-600 hoverEffect border-r border-gray-600 ps-3 h-8 hover:border-blue-600 origin-top"
+                      className="text-black flex items-center hover:text-blue-600 hoverEffect  border-r border-gray-600 ps-3 h-8 hover:border-blue-600 origin-top"
                       initial={{ scaleY: 0, opacity: 0 }}
                       animate={{ scaleY: 1, opacity: 1 }}
                       exit={{ scaleY: 0, opacity: 0 }}
@@ -62,7 +62,7 @@ const MobileHeaderItem = () => {
         ) : (
           <li
             key={item.title}
-            className="w-full h-10 flex items-center hover:text-blue-600 hoverEffect hover:border-l-2 hover:border-blue-600"
+            className="w-full h-10 flex items-center border-l-2 border-transparent hover:text-blue-600 hoverEffect hover:border-l-2 hover:border-blue-600"
           >
             {item.title}
           </li>
