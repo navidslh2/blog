@@ -1,4 +1,5 @@
-import type { Post } from '@/lib/data'
+
+import type { Post } from '@/lib/type'
 import Image from 'next/image'
 
 interface Props {
