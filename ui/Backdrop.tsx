@@ -8,7 +8,7 @@ interface Props {
 const Backdrop = ({isMobileMenuOpen, MobileMenuHandler}: Props) => {
   return (
 <AnimatePresence>
-      {isMobileMenuOpen && <motion.div className="fixed inset-0 w-screen h-screen hoverEffect bg-gray-900/70 backdrop-blur-xs" 
+      {isMobileMenuOpen && <motion.div className="fixed inset-0 w-screen h-screen hoverEffect bg-gray-900/70 backdrop-blur-xs z-2" 
       onClick={MobileMenuHandler} 
       initial={{opacity: 0}}
       animate={{opacity: 1}}

@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <header>
-      <div className="bg-yellow-400 fixed flex items-center justify-between py-2 w-screen h-15  shadow-lg px-4 md:px-10 xl:px-30 ">
+      <div className="bg-yellow-400 fixed flex items-center justify-between py-2 w-screen h-15  shadow-lg px-4 md:px-10 xl:px-30 z-1">
         <GiHamburgerMenu
           size={20}
           className="md:hidden text-black  hover:text-blue-400 cursor-pointer"
