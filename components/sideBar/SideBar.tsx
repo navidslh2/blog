@@ -4,7 +4,7 @@ import React from 'react'
 
 const SideBar = () => {
   return (
-    <div className='w-full p-3  text-sm border border-gray-300 rounded-md bg-white'>
+    <div className='w-full flex flex-col p-4 mt-10 md:mt-0 text-sm border border-gray-300 rounded-md bg-white'>
       <div className='border-b-2 pb-2 border-gray-300/80'>دسته بندی</div>
       <div className='flex flex-col gap-5 pt-2'>
         {navbar.map(items =>

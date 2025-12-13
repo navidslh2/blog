@@ -22,7 +22,7 @@ const Cards = () => {
 
   return (
     <div className="flex flex-col gap-8 items-center">
-      <div className="grid grid-cols-3 gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
         {postsToShow.map((item) => (
           <div key={item.id} className="col-span-1">
             <Card post={item} />
